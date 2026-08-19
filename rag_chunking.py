@@ -1,63 +1,186 @@
 import os
 import re
+import json
 from pypdf import PdfReader
 
-# Using the specific file you uploaded in your project folder
-PDF_FILENAME = "Permissions_User_Management.pdf"
+RAW_DOCUMENTS_DIR = "data/raw_documents"
+PROCESSED_DIR = "data/processed"
+OUTPUT_FILE = os.path.join(PROCESSED_DIR, "chunks.json")
 
-if not os.path.exists(PDF_FILENAME):
-    print(f"\n Error: '{PDF_FILENAME}' not found in this folder!")
-    print("Please make sure you copied the PDF file into: /home/avi/projects/rag-internship/")
-    exit()
+CHUNK_SIZE = 1500
+CHUNK_OVERLAP = 200
 
-print(f" Extracting text from {PDF_FILENAME}...")
-reader = PdfReader(PDF_FILENAME)
-raw_text = ""
-for page in reader.pages:
-    text_content = page.extract_text()
-    if text_content:
-        raw_text += text_content + "\n"
+os.makedirs(PROCESSED_DIR, exist_ok=True)
 
-#  Cleaning Pipeline (Assignment Part 2)
 def clean_text(text: str) -> str:
-    # Remove PDF structural layout artifacts (headers, footers, page splits)
-    text = re.sub(r"Page \d+ of \d+", "", text)
-    text = re.sub(r"--- PAGE \d+ ---", "", text)
-    text = re.sub(r"Copyright © \d+.*", "", text)
-    
     text = text.replace("\r\n", "\n")
+    text = text.replace("\r", "\n")
+
+    text = re.sub(r"Page\s+\d+\s+of\s+\d+", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
     lines = [line.strip() for line in text.split("\n")]
-    valid_lines = [line for line in lines if line]
-    return "\n\n".join(valid_lines)
+    text = "\n".join(lines).strip()
 
-cleaned_text = clean_text(raw_text)
+    return text
 
-#  Recursive Paragraph Chunker (Assignment Part 3)
-def recursive_chunker(text: str, chunk_size: int = 500) -> list[str]:
-    paragraphs = text.split("\n\n")
+def split_text(text: str, chunk_size: int, overlap: int) -> list[str]:
+    paragraphs = re.split(r"\n\s*\n", text)
+
     chunks = []
-    current_block = ""
-    
+    current_chunk = ""
+
     for paragraph in paragraphs:
-        if len(current_block) + len(paragraph) <= chunk_size:
-            current_block = f"{current_block}\n\n{paragraph}".strip()
+        paragraph = paragraph.strip()
+
+        if not paragraph:
+            continue
+
+        if len(paragraph) > chunk_size:
+            if current_chunk:
+                chunks.append(current_chunk.strip())
+                current_chunk = ""
+
+            start = 0
+
+            while start < len(paragraph):
+                end = start + chunk_size
+                piece = paragraph[start:end].strip()
+
+                if piece:
+                    chunks.append(piece)
+
+                start = end - overlap
+
+            continue
+
+        proposed = (
+            current_chunk + "\n\n" + paragraph
+            if current_chunk
+            else paragraph
+        )
+
+        if len(proposed) <= chunk_size:
+            current_chunk = proposed
         else:
-            if current_block:
-                chunks.append(current_block)
-            current_block = paragraph
-            
-    if current_block:
-        chunks.append(current_block)
+            if current_chunk:
+                chunks.append(current_chunk.strip())
+            current_chunk = paragraph
+
+    if current_chunk:
+        chunks.append(current_chunk.strip())
+
     return chunks
 
-processed_chunks = recursive_chunker(cleaned_text, chunk_size=400)
+def process_pdf(pdf_path: str) -> list[dict]:
+    print(f"\nProcessing: {pdf_path}")
 
-print(f" Document successfully parsed into {len(processed_chunks)} chunks.")
-print("\n========================================================")
-print("             YOUR 3 WEEK 3 REPORT CHUNKS")
-print("========================================================\n")
+    reader = PdfReader(pdf_path)
+    document_chunks = []
 
-for i, chunk in enumerate(processed_chunks[:3], 1):
-    print(f"--- CHUNK {i} ---")
-    print(chunk)
-    print("\n" + "="*50 + "\n")
+    for page_number, page in enumerate(reader.pages, start=1):
+        text = page.extract_text()
+
+        if not text:
+            continue
+
+        cleaned = clean_text(text)
+
+        if not cleaned:
+            continue
+
+        chunks = split_text(
+            cleaned,
+            CHUNK_SIZE,
+            CHUNK_OVERLAP
+        )
+
+        for chunk in chunks:
+            document_chunks.append({
+                "text": chunk,
+                "source": os.path.basename(pdf_path),
+                "page": page_number
+            })
+
+    return document_chunks
+
+def main():
+    all_chunks = []
+
+    if not os.path.exists(RAW_DOCUMENTS_DIR):
+        print(f"ERROR: Folder not found: {RAW_DOCUMENTS_DIR}")
+        return
+
+    pdf_files = [
+        file
+        for file in os.listdir(RAW_DOCUMENTS_DIR)
+        if file.lower().endswith(".pdf")
+    ]
+
+    if not pdf_files:
+        print("ERROR: No PDF files found.")
+        print(f"Put your PDFs inside: {RAW_DOCUMENTS_DIR}")
+        return
+
+    print("=" * 60)
+    print("        LINUX RAG DOCUMENT PROCESSING")
+    print("=" * 60)
+
+    print(f"\nFound {len(pdf_files)} PDF file(s).")
+
+    for pdf_file in pdf_files:
+        pdf_path = os.path.join(
+            RAW_DOCUMENTS_DIR,
+            pdf_file
+        )
+
+        chunks = process_pdf(pdf_path)
+        all_chunks.extend(chunks)
+
+        print(f"Created {len(chunks)} chunks.")
+
+    final_chunks = []
+
+    for index, chunk in enumerate(all_chunks, start=1):
+        final_chunks.append({
+            "chunk_id": f"chunk_{index:05d}",
+            "text": chunk["text"],
+            "source": chunk["source"],
+            "page": chunk["page"]
+        })
+
+    with open(
+        OUTPUT_FILE,
+        "w",
+        encoding="utf-8"
+    ) as file:
+        json.dump(
+            final_chunks,
+            file,
+            indent=2,
+            ensure_ascii=False
+        )
+
+    print("\n" + "=" * 60)
+    print("PROCESSING COMPLETE")
+    print("=" * 60)
+
+    print(f"\nTotal chunks: {len(final_chunks)}")
+    print(f"Output file: {OUTPUT_FILE}")
+
+    print("\nFirst 3 chunks:\n")
+
+    for chunk in final_chunks[:3]:
+        print("-" * 60)
+        print(f"ID: {chunk['chunk_id']}")
+        print(f"Source: {chunk['source']}")
+        print(f"Page: {chunk['page']}")
+        print("\nText:")
+        print(chunk["text"][:500])
+
+    print("\n" + "=" * 60)
+
+if __name__ == "__main__":
+    main()
+    
