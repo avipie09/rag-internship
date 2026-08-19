@@ -1,0 +1,278 @@
+[
+  {
+    "chunk_id": "chunk_00001",
+    "text": "Linux commands are text-based instructions entered in the terminal to interact with the operating system. They\nallow users to navigate the file system, manage files and processes, control system behavior, and automate\ntasks efficiently with precision and speed.\nLinux commands are used for:\nFast system control: Perform tasks faster than a GUI using simple commands.\nPowerful automation: Combine commands and scripts to automate repetitive tasks.\nEfficient resource management: Monitor and control processes, memory, and disk usage.\nRemote system administration: Manage servers securely over a network using terminal access.\n1. File Operations Commands\nFile operations commands are used to create, view, copy, move, compare, rename, and delete files in a Linux\nsystem. They help users efficiently manage file data and perform day-to-day file handling tasks from the\ncommand line.\naccess\nbasename\ncat\ncksum\ncmp\ncompress\ncp\ncpio\ncsplit\ncut\ndiff\ndiff3\necho\nexpand\nfile\nfold\nhead\njoin\nless\nln\nlocate\nlook\nmore\nmv\nod\npaste\nreadlink\nrename\nrev\nrm\nshred\nsort\nsplit\ntac\ntail\ntar\ntee\ntouch\nunexpand",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 1
+  },
+  {
+    "chunk_id": "chunk_00002",
+    "text": "uniq\nwc\n2. Directory Operations Commands\nDirectory operations commands are used to navigate, list, create, search, and remove directories in a Linux file\nsystem. They help users organize files and manage directory structures efficiently from the command line.\ncd\ndir\ndirname\ndirs\ndu\nfind\nlsblk\nmkdir\nmount\npwd\nrmdir\ntree\n3. File Permission and Ownership Commands\nFile permission and ownership commands are used to control access rights for files and directories by defining\nwho can read, write, or execute them. They also allow administrators to change file ownership and group\nassignments to maintain system security.\nchmod\nchattr\nchown\nchgrp\n4. User Management Commands\nUser management commands are used to create, modify, and delete user accounts in a Linux system. They\nhelp administrators manage user access, authentication, and account-related settings securely.\nchage\nchfn\nchsh\nchpasswd\nfinger\nid\npasswd\npinky\nusername\nuseradd\nuserdel\nusermod\nusers\nwho\nwhoami\n5. Group Management Commands",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 2
+  },
+  {
+    "chunk_id": "chunk_00003",
+    "text": "Group management commands are used to create, modify, and delete user groups in a Linux system. They\nhelp administrators control group-based permissions and manage multiple users efficiently.\ngroupadd\ngroupdel\ngroupmod\ngroups\ngpasswd\ngrpck\ngrpconv\n6. Process Management Commands\nProcess management commands are used to monitor, control, and manage running processes. They help track\nsystem performance, control resource usage, and terminate or prioritize processes.\naccton\nbg\nchrt\nfg\nkill\nmpstat\npidof\npmap\nps\ntop\nhtop\nstrace\ntime\nwatch\nvmstat\nuptime\nw\n7. Networking Commands\nNetworking commands are used to configure, monitor, and troubleshoot network connections. They help\nmanage IP addresses, test connectivity, transfer data, and analyze network performance.\narp\ncurl\nhost\nhostid\nhostname\nhostnamectl\nifconfig\niftop\nifup\nip\nipcrm\nipcs\niptables\niptables-save\niwconfig\nnc (netcat)\nnetstat",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00004",
+    "text": "nmcli\nnslookup\nping\nrcp\nroute\nrsync\nscp\nssh\ntracepath\ntraceroute\nvnstat\nwget\n8. Package Management Commands\nPackage management commands are used to install, update, upgrade, and remove software packages. They\nensure proper dependency handling and keep the system up to date.\napt\napt-get\naptitude\n9. Job Scheduling Commands\nJob scheduling commands are used to schedule tasks for future or recurring execution. They help automate\nroutine system jobs like backups, updates, and maintenance.\natd\natrm\natq\nbatch\ncron\ncrontab\n10. Disk and File System Commands\nDisk and file system commands are used to manage disks, partitions, and file systems. They help mount\nstorage, check disk usage, and maintain data integrity.\ncfdisk\ndf\ndosfsck\ndump\ndumpe2fs\nfdisk\nmount\nrestore\nsync\n11. Hardware and System Information Commands\nThese commands are used to display hardware details and system resource information. They help monitor\nCPU, memory, storage, and device-related data.\nacpi\nacpi_available",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 4
+  },
+  {
+    "chunk_id": "chunk_00005",
+    "text": "acpid\narch\ndmesg\ndmidecode\ndstat\nfree\nhdparm\nhwclock\niostat\niotop\nlsusb\nlshw\nuname\n12. Compression and Archiving Commands\nCompression and archiving commands are used to compress, extract, and manage archived files. They help\nreduce storage usage and simplify file transfer.\nar\nbzcmp\nbzdiff\nbzgrep\nbzip2\nbzless\nbzmore\ngunzip\ngzip\ngzexe\nzip\nzdiff\nzgrep\n13. Text Processing and Formatting Commands\nText processing commands are used to search, filter, format, and manipulate text data. They are widely used for\nlog analysis, scripting, and data processing.\nawk\naspell\nbanner\nbc\ncol\ncolcrt\ncolrm\ncolumn\ndc\negrep\nfgrep\nfmt\ngrep\nsdiff\nsed\ntr\nunix2dos",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 5
+  },
+  {
+    "chunk_id": "chunk_00006",
+    "text": "14. Kernel and Module Management Commands\nKernel and module management commands are used to load, remove, and manage kernel modules and\nsystem services. They help control low-level system functionality.\ndepmod\ninsmod\nlsmod\nmodinfo\nrmmod\nsystemctl\n15. System Control and Power Commands\nSystem control commands are used to safely shut down, reboot, or power off the system. They help ensure\nproper system termination and data safety.\nhalt\npoweroff\nreboot\nshutdown\n16. Logging and Monitoring Commands\nLogging and monitoring commands are used to view system logs and track system activity. They help diagnose\nissues, analyze usage, and audit system behavior.\njournalctl\nlast\nhistory\nsar\nscript\nscriptreplay\n17. Checksum and File Integrity Commands\nThese commands are used to verify file integrity using hash values. They help detect file corruption or\nunauthorized changes.\nmd5sum\ncksum\nsum\n18. Date and Time Commands\nDate and time commands are used to display and manage system date, time, and uptime. They help with time\nsynchronization and system monitoring.\ncal\ndate\nuptime\n19. Mail and User Communication Commands\nMail and communication commands are used for user messaging and system notifications. They help",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 6
+  },
+  {
+    "chunk_id": "chunk_00007",
+    "text": "administrators communicate with users and manage mail queues.\nbiff\nmailq\nwrite\nwall\n20. Printing and Media Commands\nPrinting and media commands are used to manage audio, printing services, and media devices. They help\ncontrol sound, printers, and removable media.\namixer\naplay\naplaymidi\ncupsd\neject\nimport\n21. Shell Built-in and Scripting Commands\nShell built-in commands are used for scripting, automation, and flow control within the shell. They help write\nefficient scripts and control command execution.\nalias\nbind\nbreak\nbuiltin\ncase\ncontinue\ndeclare\nenable\nenv\neval\nexec\nexit\nexpect\nexport\nexpr\nfactor\nfc\nfunction\nfor\nif\nlet\nprintf\nread\nreturn\nselect\nseq\nsetsid\nshift\nsource\ntype\nuntil\nwhile",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 7
+  },
+  {
+    "chunk_id": "chunk_00008",
+    "text": "yes\nsudo\nsleep\nBash Shortcuts Commands:\nBash shortcut commands are keyboard combinations used in the Linux terminal to quickly perform common\nactions without typing full commands. They help users work faster and more efficiently by improving navigation,\nediting, and command execution.\n1. Navigation Shortcuts\nUsed to move the cursor quickly within the command line.\nCtrl + A : Move to the beginning of the line\nCtrl + E : Move to the end of the line\nCtrl + B : Move back one character\nCtrl + F : Move forward one character\nAlt + B : Move back one word\nAlt + F : Move forward one word\n2. Editing Shortcuts\nUsed to edit or modify the command line efficiently.\nCtrl + U : Cut/delete text from the cursor to the beginning of the line\nCtrl + K : Cut/delete text from the cursor to the end of the line\nCtrl + W : Cut/delete the word before the cursor\nCtrl + Y : Paste the last cut text\nCtrl + L : Clear the terminal screen\nCtrl + C : Terminate the currently running command\n3. History Shortcuts\nUsed to search and navigate through previously executed commands.\nCtrl + R : Search command history (reverse search)\nCtrl + G : Exit history search mode\nCtrl + P : Go to the previous command in history\nCtrl + N : Go to the next command in history\n22. Development and Build Automation Commands\nDevelopment commands are used to compile, build, debug, and analyze programs. They support software\ndevelopment and build automation processes.\naclocal\naddr2line\nautoconf\nautoheader\nautomake\nautoreconf\nautoupdate\nbiso",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 8
+  },
+  {
+    "chunk_id": "chunk_00009",
+    "text": "nds are used to compile, build, debug, and analyze programs. They support software\ndevelopment and build automation processes.\naclocal\naddr2line\nautoconf\nautoheader\nautomake\nautoreconf\nautoupdate\nbison\ncc\ncpp\nctags",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 8
+  },
+  {
+    "chunk_id": "chunk_00010",
+    "text": "g++\ngcc\ngdb\nranlib\nreadelf\n23. Terminal and Session Management Commands\nTerminal and session management commands are used to manage terminal sessions and input/output\nbehavior. They help control multiple sessions and terminal settings.\nagetty\nchvt\nreset\nscreen\nshowkey\nstty\ntty\nxdg-open\n24. Help and Documentation Commands\nHelp and documentation commands are used to view manuals, usage guides, and command descriptions.\nThey assist users in learning and understanding Linux commands.\napropos\nhelp\ninfo\nman\nwhatis\nwhich\n25. Text Editors in Linux\nText editors are used to create and modify files from the terminal.\n1. nano\nnano is a simple and beginner-friendly text editor used in the terminal. It provides on-screen shortcuts, making it\neasy to edit files without prior experience.\n2. vi\nvi is a powerful and lightweight text editor available on almost all Linux systems. It works in different modes,\nwhich allows efficient text editing using keyboard commands.\n3. vim\nvim (Vi Improved) is an advanced version of vi with enhanced features like syntax highlighting and plugins. It is\nwidely used by developers for fast and efficient coding.\n4. ed\ned is a line-based text editor and one of the oldest editors in Linux. It is mainly used for scripting and low-level\ntext processing.",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 9
+  },
+  {
+    "chunk_id": "chunk_00011",
+    "text": "5. emacs\nemacs is a highly customizable and extensible text editor. It supports programming, scripting, email, and many\nother tasks beyond basic text editing.\nShortcuts Commands & Keys of Text Editors\nThere are many shortcuts commands in Linux that can help you be more productive. Here are a few of the most\ncommon ones:\n1. Nano Shortcuts Commands:\nFile Operations\nUsed to open, save, and exit files.\nCtrl + O – Save (write) the current file\nCtrl + X – Exit Nano (prompts to save if the file is modified)\nCtrl + R – Read and insert another file into the current buffer\nNavigation\nUsed to move through the file quickly.\nCtrl + Y – Scroll up one page\nCtrl + V – Scroll down one page\nAlt + \\ – Go to a specific line number\nAlt + , – Move to the beginning of the current line\nAlt + . – Move to the end of the current line\nEditing\nUsed to modify text efficiently.\nCtrl + K – Cut/delete text from the cursor to the end of the line\nCtrl + U – Uncut (paste) the last cut text\nCtrl + 6 – Mark a block of text for copying or cutting\nAlt + 6 – Copy the marked block of text\nCtrl + K – Cut/delete the marked block of text\nCtrl + J – Justify (format) the current paragraph\nSearch and Replace\nUsed to find and replace text in a file.\nCtrl + W – Search for a string in the text\nAlt + W – Search and replace a string\nAlt + R – Repeat the last search\n2. VI/VIM Shortcuts Commands:\nInsert & Replace Mode Commands\nUsed to enter insert mode or replace existing text.\ni – Switch to insert mode before the cursor\na – Swit",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 10
+  },
+  {
+    "chunk_id": "chunk_00012",
+    "text": "g\nAlt + R – Repeat the last search\n2. VI/VIM Shortcuts Commands:\nInsert & Replace Mode Commands\nUsed to enter insert mode or replace existing text.\ni – Switch to insert mode before the cursor\na – Switch to insert mode after the cursor",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 10
+  },
+  {
+    "chunk_id": "chunk_00013",
+    "text": "A – Switch to insert mode at the end of the current line\no – Insert a new line below the current line and switch to insert mode\nR – Enter replace mode and overwrite characters until Esc is pressed\nr – Replace the character under the cursor with a single new character\ns – Substitute the character under the cursor and switch to insert mode\nS – Delete the current line and switch to insert mode\nC – Delete from the cursor to the end of the line and switch to insert mode\nDelete & Change Commands\nUsed to remove or modify text efficiently.\nx – Delete the character under the cursor\ndd – Delete the current line\n3dd – Delete the current line and the next two lines\nD – Delete from the cursor to the end of the line\ndw – Delete from the cursor to the beginning of the next word\n4dw – Delete the next four words from the cursor position\ncw – Change the current word and switch to insert mode\nUndo & Restore Commands\nUsed to revert changes.\nu – Undo the last change\nU – Restore the current line to its original state\nCase & Miscellaneous Commands\nUsed for quick character-level edits.\n~ – Toggle the case of the character under the cursor\nMode Control\nUsed to switch between editing modes.\nEsc – Exit insert or command-line mode and return to command mode\n3. Vim Modes and Commands\nNormal Mode\nUsed for navigation, deletion, copying, and undo/redo operations.\ni – Enter insert mode at the current cursor position\nx – Delete the character under the cursor\ndd – Delete the current line\nyy – Copy (yank) the c",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 11
+  },
+  {
+    "chunk_id": "chunk_00014",
+    "text": "igation, deletion, copying, and undo/redo operations.\ni – Enter insert mode at the current cursor position\nx – Delete the character under the cursor\ndd – Delete the current line\nyy – Copy (yank) the current line\np – Paste the copied or deleted text below the current line\nu – Undo the last change\nCtrl + R – Redo the last undone change\nCommand Mode (Last Line Mode)\nUsed for saving files, quitting Vim, and performing advanced operations.\n:w – Save the file",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 11
+  },
+  {
+    "chunk_id": "chunk_00015",
+    "text": ":q – Quit Vim\n:q! – Quit Vim without saving changes\n:wq or :x – Save and quit Vim\n:set nu or :set number – Display line numbers\n:s/old/new/g – Replace all occurrences of old with new in the file\nVisual Mode\nUsed for selecting text to copy, delete, or modify.\nv – Enter visual mode to select text\ny – Copy (yank) the selected text\nd – Delete the selected text\np – Paste the copied or deleted text\n26. IO Redirection Commands\nIO (Input/Output) redirection commands are used to redirect the standard input, output, and error streams of\ncommands and processes. Here are some commonly used IO redirection commands:\ncmd < file : Redirects the input of cmd to be read from file instead of the keyboard.1.\ncmd > file : Redirects the standard output (stdout) of cmd to file, overwriting existing content.2.\ncmd >> file : Appends the standard output (stdout) of cmd to the end of file.3.\ncmd 2> file : Redirects the error output (stderr) of cmd to file.4.\ncmd 2>&1 : Redirects stderr to the same destination as stdout.5.\ncmd &> file : Redirects both stdout and stderr to file.6.\ncmd 1>&2 : Redirects stdout to the same destination as stderr.7.\ncmd > /dev/null : Discards the standard output by sending it to the null device.8.\ncmd1 <(cmd2) : Uses the output of cmd2 as an input file for cmd1 (process substitution).9.\n27. Environment Variable Commands\nEnvironment variables are used to store configuration settings, system information, and other variables that can\nbe accessed by processes and shell scripts. H",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 12
+  },
+  {
+    "chunk_id": "chunk_00016",
+    "text": "ion).9.\n27. Environment Variable Commands\nEnvironment variables are used to store configuration settings, system information, and other variables that can\nbe accessed by processes and shell scripts. Here are some commonly used environment variable commands:\nexport VARIABLE_NAME=value : Sets and exports an environment variable so it is available to child\nprocesses.\necho $VARIABLE_NAME : Displays the value of a specific environment variable.\nenv : Lists all environment variables currently set in the system.\nunset VARIABLE_NAME : Removes or unsets an existing environment variable.\nexport -p : Shows a list of all currently exported environment variables.\nenv VAR1=value COMMAND : Sets an environment variable temporarily for a specific command\nexecution.\nprintenv : Displays the values of all environment variables or a specific one if provided.",
+    "source": "Linux_Commands_Cheatsheet_by_GFG.pdf",
+    "page": 12
+  },
+  {
+    "chunk_id": "chunk_00017",
+    "text": "Linux Command Reference Manual\nComprehensive Cheat Sheet & Terminal Configuration Guide | Derived from Hostinger Tutorials\nThis document serves as an exhaustive reference manual for system administrators, developers, and engineers\nworking in Linux cloud ecosystems. It compiles essential utilities across categories ranging from directory\nnavigation and core data extraction to network provisioning.\nFile & Directory Navigation\npwd Prints the full path of the current working directory.\nSyntax: pwd [options]\nCommon Flags:-L (logical path with symlinks), -P (physical path resolving symlinks)\nPractical Usage:pwd -P\nls Lists files and directories within a specified or current location.\nSyntax: ls [options] [directory]\nCommon Flags:-l (long format detailing sizes, owners), -a (show hidden files), -h (human readable sizes)\nPractical Usage:ls -lah /var/www\ncd Changes the current working directory to a specified path.\nSyntax: cd [path]\nCommon Flags:cd (home directory), cd .. (up one level), cd - (previous directory)\nPractical Usage:cd /var/www/html\nmkdir Creates one or more new empty directories.\nSyntax: mkdir [options] directory_name\nCommon Flags:-p (create nested parent directories automatically without throwing errors), -m (set custom mode/\npermissions)\nPractical Usage:mkdir -p /path/to/new_folder\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 1
+  },
+  {
+    "chunk_id": "chunk_00018",
+    "text": "rmdir Removes empty directories only.\nSyntax: rmdir [options] directory_name\nCommon Flags:-p (remove explicit parent directories if they become empty)\nPractical Usage:rmdir -p backup/old\nrm Deletes files or directory structures permanently.\nSyntax: rm [options] file_or_dir\nCommon Flags:-r (recursive for directories), -f (force extraction/removal without prompting), -i (prompt before delete)\nPractical Usage:rm -rf /tmp/cache_old\nFile Management & Manipulation\ncp Copies files or whole folders from a source to a destination.\nSyntax: cp [options] source target\nCommon Flags:-R (recursive for folder trees), -i (interactive prompt before overwrite), -v (verbose log output)\nPractical Usage:cp -R /src/folder /dest/folder\nmv Moves or renames files and folders across locations.\nSyntax: mv [options] source target\nCommon Flags:-v (explain what is being done), -n (do not overwrite existing files)\nPractical Usage:mv old_name.txt new_name.txt\ntouch Creates a new empty file or updates access/modified timestamps of existing files.\nSyntax: touch [options] filename\nCommon Flags:-c (do not create if file doesn't exist), -a (change access time only), -m (modification time only)\nPractical Usage:touch config.json\nfile Inspects and identifies the structural file type based on contents/magic numbers.\nSyntax: file [options] filename\nCommon Flags:-k (keep going, look past first match), -i (output MIME type strings)\nPractical Usage:file image.png\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 2
+  },
+  {
+    "chunk_id": "chunk_00019",
+    "text": "zip / unzipCompresses files into standard ZIP archives or extracts compressed files out.\nSyntax: zip [opts] archive.zip files | unzip archive.zip\nCommon Flags:-r (zip recursively), -e (encrypt zip archive with password input)\nPractical Usage:zip -re archive.zip document_folder/\ntar Archives files into tarballs, often with gzip or bzip2 compression utilities.\nSyntax: tar [options] archive.tar.gz targets\nCommon Flags:-c (create), -x (extract), -f (specify file), -z (gzip tool filter), -v (verbose)\nPractical Usage:tar -czvf backup.tar.gz /home/user\nText Editors & Viewing Content\ncat Concatenates and displays file contents straight to the standard output terminal.\nSyntax: cat [options] filename\nCommon Flags:-n (number all output lines), -T (display tab characters as ^I)\nPractical Usage:cat -n /etc/hosts\nnano A simple, user-friendly terminal-based visual text editor.\nSyntax: nano filename\nCommon Flags:Built-in interactive shortcut menus: Ctrl+O (Save), Ctrl+X (Exit)\nPractical Usage:nano /etc/nginx/nginx.conf\nvi / vimAdvanced modal terminal text editor preferred for extensive code/configuration changes.\nSyntax: vi filename\nCommon Flags:Modes: Command mode, Insert mode (i), Colon mode (:w to write, :q to quit)\nPractical Usage:vi /etc/fstab\nhead Outputs the very first beginning lines of a specified file.\nSyntax: head [options] filename\nCommon Flags:-n [number] (print specific count of lines, defaults to first 10 items)\nPractical Usage:head -n 20 error.log\nHostinger Linux Terminal Gui",
+    "source": "linux_commands_reference.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00020",
+    "text": "a specified file.\nSyntax: head [options] filename\nCommon Flags:-n [number] (print specific count of lines, defaults to first 10 items)\nPractical Usage:head -n 20 error.log\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00021",
+    "text": "tail Outputs the absolute final tail-end lines of a targeted text file.\nSyntax: tail [options] filename\nCommon Flags:-n [number] (print custom count of lines), -f (live append track follow loop logs dynamically)\nPractical Usage:tail -f /var/log/syslog\nless Interactive reader that allows back/forward page scrolls inside oversized files.\nSyntax: less filename\nCommon Flags:Navigation keys: Space (Page Down), B (Page Up), /pattern (Search forward)\nPractical Usage:less /var/log/auth.log\nText Processing & Filtering\ngrep Searches for matching text regular expression pattern strings across targeted files.\nSyntax: grep [options] pattern file\nCommon Flags:-i (ignore capitalization case), -r (recursive directories), -v (invert match search logic)\nPractical Usage:grep -ri 'failed' /var/log/\nsed Stream editor tool for parsing, finding, transforming, and filtering stream patterns.\nSyntax: sed [options] 'script' file\nCommon Flags:s/old/new/g (substitute glob pattern matches inline), -i (modify text files in-place)\nPractical Usage:sed -i 's/localhost/127.0.0.1/g' config.env\nawk Powerful text scanning and column processing language tailored to data analytics reporting.\nSyntax: awk 'program' file\nCommon Flags:-F (specify column delimiter split characters), defaults to spacing blocks\nPractical Usage:awk -F: '{print $1, $3}' /etc/passwd\nsort Sorts input text file lines alphabetically, numerically, or custom rules.\nSyntax: sort [options] file\nCommon Flags:-n (numeric sorting sequence evaluation),",
+    "source": "linux_commands_reference.pdf",
+    "page": 4
+  },
+  {
+    "chunk_id": "chunk_00022",
+    "text": "e:awk -F: '{print $1, $3}' /etc/passwd\nsort Sorts input text file lines alphabetically, numerically, or custom rules.\nSyntax: sort [options] file\nCommon Flags:-n (numeric sorting sequence evaluation), -r (reverse order sequencing output results)\nPractical Usage:sort -n metrics.txt\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 4
+  },
+  {
+    "chunk_id": "chunk_00023",
+    "text": "cut Extracts section clips out from every individual text line in a file structured grid.\nSyntax: cut [options] file\nCommon Flags:-d (custom fields separator character delimiter), -f (fields position arrays selector)\nPractical Usage:cut -d',' -f1 data.csv\ndiff Compares two targeted text file buffers line by line to calculate visual changes.\nSyntax: diff [options] file1 file2\nCommon Flags:-w (ignore all whitespace changes), -u (unified layout output context viewer format)\nPractical Usage:diff -u config.orig config.new\nSystem Administration & Account Controls\nsudo Executes a standalone console application with administrative or security root privileges.\nSyntax: sudo command\nCommon Flags:-i (simulate login shell environment for target user root account environment)\nPractical Usage:sudo systemctl restart nginx\nsu Switches the active shell identity over to another user environment session.\nSyntax: su [options] [username]\nCommon Flags:- (provide standard target user environment variables and configuration startup state)\nPractical Usage:su - admin\nchmod Modifies system object access permission bit indicators.\nSyntax: chmod [options] mode file\nCommon Flags:Octal values: 7 (rwx), 6 (rw-), 4 (r--). Parameters: -R (recursively apply flags downstream)\nPractical Usage:chmod 755 script.sh\nchown Changes explicit owner and grouping metrics assignment of filesystem targets.\nSyntax: chown [options] owner[:group] target\nCommon Flags:-R (recursively apply file ownership parameters down directori",
+    "source": "linux_commands_reference.pdf",
+    "page": 5
+  },
+  {
+    "chunk_id": "chunk_00024",
+    "text": "n Changes explicit owner and grouping metrics assignment of filesystem targets.\nSyntax: chown [options] owner[:group] target\nCommon Flags:-R (recursively apply file ownership parameters down directories nested path structures)\nPractical Usage:chown -R www-data:www-data /var/www\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 5
+  },
+  {
+    "chunk_id": "chunk_00025",
+    "text": "whoamiPrints out the current effective user login registry identity string token.\nSyntax: whoami\nCommon Flags:None\nPractical Usage:whoami\nhostnameDisplays or provisions updates to the current system hostname network label tag.\nSyntax: hostname [options]\nCommon Flags:-I (displays all local network IP interfaces addresses assigned cleanly)\nPractical Usage:hostname -I\nSystem Performance & Process Management\ntop / htop\nDynamic interactive process resource usage monitor tracks active processes and hardware stats.\nSyntax: top | htop\nCommon Flags:htop features cleaner color bars and easy cursor navigation lists (if installed)\nPractical Usage:htop\nps Provides a static snapshot report tracking currently running user/system processes.\nSyntax: ps [options]\nCommon Flags:aux (all user items listed, process owner labels, un-entangled terminal wrappers)\nPractical Usage:ps aux | grep node\nkill Sends a targeted operational signal (like terminate) to a running process ID (PID).\nSyntax: kill [options] PID\nCommon Flags:-9 (SIGKILL immediately force closure), -15 (SIGTERM clean exit sequence default)\nPractical Usage:kill -9 1234\nsystemctlControls, inspects, starts, halts, and provisions state for systemd service daemons.\nSyntax: systemctl [action] service\nCommon Flags:Actions: start, stop, restart, status, enable (boot run auto), disable\nPractical Usage:systemctl status docker\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 6
+  },
+  {
+    "chunk_id": "chunk_00026",
+    "text": "df Reports storage space usage statistics for all active mounted filesystems.\nSyntax: df [options]\nCommon Flags:-h (human readable output sizing formatting scales using MB/GB units cleanly)\nPractical Usage:df -h\ndu Estimates and tallies disk capacity storage space consumed by targeted directories.\nSyntax: du [options] [path]\nCommon Flags:-h (human readable), -s (summarize root total volume without individual items list metrics)\nPractical Usage:du -sh /var/log\nNetworking & External Downloads\nping Sends ICMP echo packets to evaluate network path connectivity and host latency metrics.\nSyntax: ping [options] destination\nCommon Flags:-c [count] (limits maximum amount of packet ping sequences sent before stop)\nPractical Usage:ping -c 4 google.com\nwget Non-interactive network downloader utility that extracts files directly from web hosts.\nSyntax: wget [options] URL\nCommon Flags:-O [filename] (custom output save mapping path), -c (resume half-completed stream files)\nPractical Usage:wget -O package.tar.gz https://example.com/file\ncurl Transfers data to or from a network server using supported application protocols (HTTP/FTP).\nSyntax: curl [options] URL\nCommon Flags:-I (fetch header metadata only), -o [file] (save body content target), -L (follow redirect paths)\nPractical Usage:curl -IL https://hostinger.com\nssh Establishes an encrypted secure shell tunnel login connection to remote host nodes.\nSyntax: ssh [options] user@host\nCommon Flags:-p [port] (connect target alternate port struct",
+    "source": "linux_commands_reference.pdf",
+    "page": 7
+  },
+  {
+    "chunk_id": "chunk_00027",
+    "text": "tps://hostinger.com\nssh Establishes an encrypted secure shell tunnel login connection to remote host nodes.\nSyntax: ssh [options] user@host\nCommon Flags:-p [port] (connect target alternate port structure overrides), -i [identity_file] (private key map)\nPractical Usage:ssh -i ~/.ssh/id_rsa root@192.168.1.50\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 7
+  },
+  {
+    "chunk_id": "chunk_00028",
+    "text": "scp Securely copies files between networked endpoints over an encrypted SSH protocol link layer.\nSyntax: scp [options] source target\nCommon Flags:-P [port] (override SSH port parameters), -r (recursive directory tree transfers)\nPractical Usage:scp -P 2222 local.txt user@remote:/path/\nrsync Advanced incremental file syncing engine optimized for rapid delta local/remote copy tracking.\nSyntax: rsync [options] source target\nCommon Flags:-a (archive mode preserves attributes), -v (verbose output logs), -z (compress packet streams)\nPractical Usage:rsync -avz /src/ backup/user@host:/dest/\nHostinger Linux Terminal Guide",
+    "source": "linux_commands_reference.pdf",
+    "page": 8
+  },
+  {
+    "chunk_id": "chunk_00029",
+    "text": "Linux RAG Dataset - PDF 3: Permissions & User\nManagement\nchmod\nCategory: Permissions\nDescription: Change file permissions\nSyntax: chmod [OPTIONS] MODE FILE\nExample: chmod 755 script.sh\nOptions: -R recursive, -v verbose\nCommon Error: Permission denied\nSolution: Check ownership or use sudo\nCommon Mistake: Using 777 unnecessarily\nRelated: chown\nBest Practice: Secure scripts\nDifficulty: Intermediate\nchown\nCategory: Permissions\nDescription: Change file owner\nSyntax: chown USER:GROUP FILE\nExample: chown alice:dev file.txt\nOptions: -R recursive\nCommon Error: Operation not permitted\nSolution: Use sudo\nCommon Mistake: Changing system files\nRelated: chmod\nBest Practice: Set correct ownership\nDifficulty: Intermediate\nchgrp\nCategory: Permissions\nDescription: Change group ownership\nSyntax: chgrp GROUP FILE\nExample: chgrp dev project\nOptions: -R recursive\nCommon Error: Invalid group\nSolution: Create group first\nCommon Mistake: Wrong group\nRelated: groups\nBest Practice: Use project groups\nDifficulty: Beginner\numask\nCategory: Permissions\nDescription: Set default permissions\nSyntax: umask MODE\nExample: umask 022\nOptions:\nCommon Error: Unexpected permissions\nSolution: Verify mask\nCommon Mistake: Too restrictive mask\nRelated: chmod\nBest Practice: Set organization policy\nDifficulty: Intermediate\nsudo\nCategory: Users",
+    "source": "Permissions_User_Management.pdf",
+    "page": 1
+  },
+  {
+    "chunk_id": "chunk_00030",
+    "text": "Description: Run as superuser\nSyntax: sudo COMMAND\nExample: sudo apt update\nOptions: -u user\nCommon Error: User not in sudoers\nSolution: Edit sudoers safely\nCommon Mistake: Running everything as root\nRelated: visudo\nBest Practice: Use least privilege\nDifficulty: Beginner\nsu\nCategory: Users\nDescription: Switch user\nSyntax: su USER\nExample: su root\nOptions: -l login shell\nCommon Error: Authentication failure\nSolution: Correct password\nCommon Mistake: Staying as root\nRelated: sudo\nBest Practice: Exit after work\nDifficulty: Beginner\npasswd\nCategory: Users\nDescription: Change password\nSyntax: passwd USER\nExample: passwd alice\nOptions:\nCommon Error: Authentication token error\nSolution: Retry as root\nCommon Mistake: Weak passwords\nRelated: chage\nBest Practice: Use strong passwords\nDifficulty: Beginner\nuseradd\nCategory: Users\nDescription: Create new user\nSyntax: useradd USER\nExample: useradd bob\nOptions: -m create home\nCommon Error: User exists\nSolution: Choose another name\nCommon Mistake: No home directory\nRelated: usermod\nBest Practice: Create home\nDifficulty: Intermediate\nuserdel\nCategory: Users\nDescription: Delete user\nSyntax: userdel USER\nExample: userdel bob\nOptions: -r remove home\nCommon Error: User logged in\nSolution: Log out first",
+    "source": "Permissions_User_Management.pdf",
+    "page": 2
+  },
+  {
+    "chunk_id": "chunk_00031",
+    "text": "Common Mistake: Deleting wrong account\nRelated: useradd\nBest Practice: Backup data\nDifficulty: Intermediate\nusermod\nCategory: Users\nDescription: Modify user\nSyntax: usermod OPTIONS USER\nExample: usermod -aG sudo bob\nOptions: -aG append group\nCommon Error: Group missing\nSolution: Create group\nCommon Mistake: Overwriting groups\nRelated: groupadd\nBest Practice: Use -a with -G\nDifficulty: Intermediate\ngroupadd\nCategory: Groups\nDescription: Create group\nSyntax: groupadd GROUP\nExample: groupadd developers\nOptions:\nCommon Error: Group exists\nSolution: Rename group\nCommon Mistake: Duplicate names\nRelated: groupmod\nBest Practice: Consistent names\nDifficulty: Beginner\ngroupdel\nCategory: Groups\nDescription: Delete group\nSyntax: groupdel GROUP\nExample: groupdel temp\nOptions:\nCommon Error: Primary group\nSolution: Reassign users\nCommon Mistake: Deleting active group\nRelated: groupmod\nBest Practice: Check members\nDifficulty: Intermediate\ngroupmod\nCategory: Groups\nDescription: Modify group\nSyntax: groupmod OPTIONS GROUP\nExample: groupmod -n dev developers\nOptions: -n rename\nCommon Error:\nSolution:\nCommon Mistake: Renaming active groups\nRelated: groupadd\nBest Practice: Plan changes\nDifficulty: Intermediate",
+    "source": "Permissions_User_Management.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00032",
+    "text": "groups\nCategory: Groups\nDescription: Show user groups\nSyntax: groups USER\nExample: groups alice\nOptions:\nCommon Error:\nSolution:\nCommon Mistake:\nRelated: id\nBest Practice: Verify memberships\nDifficulty: Beginner\nid\nCategory: Users\nDescription: Display UID/GID\nSyntax: id USER\nExample: id alice\nOptions:\nCommon Error:\nSolution:\nCommon Mistake:\nRelated: groups\nBest Practice: Debug permissions\nDifficulty: Beginner\nwhoami\nCategory: Users\nDescription: Current username\nSyntax: whoami\nExample: whoami\nOptions:\nCommon Error:\nSolution:\nCommon Mistake:\nRelated: id\nBest Practice: Useful in scripts\nDifficulty: Beginner\nwho\nCategory: Users\nDescription: Logged in users\nSyntax: who\nExample: who\nOptions:\nCommon Error:\nSolution:\nCommon Mistake:\nRelated: w\nBest Practice: Monitor sessions\nDifficulty: Beginner\nw\nCategory: Users\nDescription: Show logged users and activity\nSyntax: w\nExample: w\nOptions:\nCommon Error:",
+    "source": "Permissions_User_Management.pdf",
+    "page": 4
+  },
+  {
+    "chunk_id": "chunk_00033",
+    "text": "Solution:\nCommon Mistake:\nRelated: who\nBest Practice: Check load\nDifficulty: Beginner\nlast\nCategory: Users\nDescription: Login history\nSyntax: last\nExample: last\nOptions:\nCommon Error:\nSolution:\nCommon Mistake:\nRelated: who\nBest Practice: Audit logins\nDifficulty: Intermediate\nvisudo\nCategory: Admin\nDescription: Edit sudoers safely\nSyntax: visudo\nExample: visudo\nOptions:\nCommon Error: Syntax error\nSolution: Use visudo only\nCommon Mistake: Editing file directly\nRelated: sudo\nBest Practice: Always validate\nDifficulty: Advanced",
+    "source": "Permissions_User_Management.pdf",
+    "page": 5
+  },
+  {
+    "chunk_id": "chunk_00034",
+    "text": "Linux RAG Dataset - PDF 5: Process & System\nManagement\nps\nCategory: Process Management\nDescription: Display running processes\nSyntax: ps [options]\nExample: ps aux\nNotes: Shows active processes.\nRelated Commands: top\nDifficulty: Beginner\ntop\nCategory: Monitoring\nDescription: Monitor system processes in real time\nSyntax: top\nExample: top\nNotes: Displays CPU and memory usage.\nRelated Commands: htop\nDifficulty: Beginner\nhtop\nCategory: Monitoring\nDescription: Interactive process viewer\nSyntax: htop\nExample: htop\nNotes: Enhanced version of top.\nRelated Commands: top\nDifficulty: Beginner\nkill\nCategory: Process Management\nDescription: Terminate a process using PID\nSyntax: kill PID\nExample: kill 1234\nNotes: Sends SIGTERM by default.\nRelated Commands: pkill\nDifficulty: Beginner\npkill\nCategory: Process Management\nDescription: Kill processes by name\nSyntax: pkill process_name\nExample: pkill firefox\nNotes: Uses process names.\nRelated Commands: kill\nDifficulty: Intermediate\nkillall\nCategory: Process Management\nDescription: Kill all processes with same name\nSyntax: killall process_name\nExample: killall chrome",
+    "source": "Process_System_Management.pdf",
+    "page": 1
+  },
+  {
+    "chunk_id": "chunk_00035",
+    "text": "Notes: Terminates all matching processes.\nRelated Commands: pkill\nDifficulty: Intermediate\nnice\nCategory: Performance\nDescription: Start a process with priority\nSyntax: nice -n VALUE COMMAND\nExample: nice -n 10 python app.py\nNotes: Lower priority number = higher priority.\nRelated Commands: renice\nDifficulty: Intermediate\nrenice\nCategory: Performance\nDescription: Change running process priority\nSyntax: renice VALUE PID\nExample: renice 5 1234\nNotes: Modify priority after start.\nRelated Commands: nice\nDifficulty: Intermediate\nsystemctl\nCategory: Services\nDescription: Manage systemd services\nSyntax: systemctl COMMAND SERVICE\nExample: systemctl restart ssh\nNotes: Used in modern Linux distributions.\nRelated Commands: service\nDifficulty: Intermediate\nservice\nCategory: Services\nDescription: Manage services (legacy)\nSyntax: service NAME ACTION\nExample: service apache2 restart\nNotes: Legacy service manager.\nRelated Commands: systemctl\nDifficulty: Intermediate\njournalctl\nCategory: Logs\nDescription: View systemd logs\nSyntax: journalctl [options]\nExample: journalctl -xe\nNotes: Reads journal logs.\nRelated Commands: dmesg\nDifficulty: Intermediate\ndmesg\nCategory: Logs\nDescription: Display kernel messages\nSyntax: dmesg",
+    "source": "Process_System_Management.pdf",
+    "page": 2
+  },
+  {
+    "chunk_id": "chunk_00036",
+    "text": "Example: dmesg | tail\nNotes: Useful for hardware issues.\nRelated Commands: journalctl\nDifficulty: Intermediate\nfree\nCategory: Memory\nDescription: Display memory usage\nSyntax: free -h\nExample: free -h\nNotes: Shows RAM and swap usage.\nRelated Commands: vmstat\nDifficulty: Beginner\nuptime\nCategory: System Info\nDescription: Show system uptime\nSyntax: uptime\nExample: uptime\nNotes: Shows load averages.\nRelated Commands: w\nDifficulty: Beginner\nvmstat\nCategory: Performance\nDescription: Report virtual memory statistics\nSyntax: vmstat\nExample: vmstat 2\nNotes: Useful for performance monitoring.\nRelated Commands: free\nDifficulty: Intermediate\niostat\nCategory: Disk\nDescription: Display CPU and disk statistics\nSyntax: iostat\nExample: iostat -x\nNotes: Requires sysstat package.\nRelated Commands: vmstat\nDifficulty: Intermediate\nsar\nCategory: Performance\nDescription: Collect system activity information\nSyntax: sar\nExample: sar -u\nNotes: Historical performance reports.\nRelated Commands: iostat\nDifficulty: Advanced\nlsof\nCategory: Files\nDescription: List open files",
+    "source": "Process_System_Management.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00037",
+    "text": "Syntax: lsof\nExample: lsof -i :80\nNotes: Shows which process opened a file.\nRelated Commands: fuser\nDifficulty: Intermediate\nfuser\nCategory: Files\nDescription: Identify process using file\nSyntax: fuser FILE\nExample: fuser /home/file.txt\nNotes: Shows process IDs.\nRelated Commands: lsof\nDifficulty: Intermediate\nstrace\nCategory: Debugging\nDescription: Trace system calls\nSyntax: strace COMMAND\nExample: strace ls\nNotes: Useful for debugging.\nRelated Commands: ltrace\nDifficulty: Advanced\nltrace\nCategory: Debugging\nDescription: Trace library calls\nSyntax: ltrace COMMAND\nExample: ltrace ls\nNotes: Library function tracing.\nRelated Commands: strace\nDifficulty: Advanced\ncrontab\nCategory: Scheduling\nDescription: Manage scheduled jobs\nSyntax: crontab -e\nExample: crontab -l\nNotes: Edit cron jobs.\nRelated Commands: at\nDifficulty: Intermediate\nat\nCategory: Scheduling\nDescription: Run a command once later\nSyntax: at TIME\nExample: at 10:30\nNotes: One-time scheduled task.\nRelated Commands: crontab\nDifficulty: Intermediate\nnohup\nCategory: Background Jobs",
+    "source": "Process_System_Management.pdf",
+    "page": 4
+  },
+  {
+    "chunk_id": "chunk_00038",
+    "text": "Description: Run command after logout\nSyntax: nohup COMMAND\nExample: nohup python app.py &\nNotes: Ignores hangup signal.\nRelated Commands: &\nDifficulty: Intermediate\njobs\nCategory: Shell\nDescription: Show background jobs\nSyntax: jobs\nExample: jobs\nNotes: Lists current shell jobs.\nRelated Commands: bg\nDifficulty: Beginner\nbg\nCategory: Shell\nDescription: Resume job in background\nSyntax: bg JOB_ID\nExample: bg %1\nNotes: Continues stopped jobs.\nRelated Commands: fg\nDifficulty: Beginner\nfg\nCategory: Shell\nDescription: Bring job to foreground\nSyntax: fg JOB_ID\nExample: fg %1\nNotes: Interact with background job.\nRelated Commands: bg\nDifficulty: Beginner\ntime\nCategory: Performance\nDescription: Measure execution time\nSyntax: time COMMAND\nExample: time python app.py\nNotes: Shows execution duration.\nRelated Commands: uptime\nDifficulty: Beginner\nwatch\nCategory: Monitoring\nDescription: Run command repeatedly\nSyntax: watch COMMAND\nExample: watch df -h\nNotes: Updates output periodically.\nRelated Commands: top\nDifficulty: Beginner",
+    "source": "Process_System_Management.pdf",
+    "page": 5
+  },
+  {
+    "chunk_id": "chunk_00039",
+    "text": "sleep\nCategory: Shell\nDescription: Pause execution\nSyntax: sleep SECONDS\nExample: sleep 5\nNotes: Useful in scripts.\nRelated Commands: wait\nDifficulty: Beginner",
+    "source": "Process_System_Management.pdf",
+    "page": 6
+  },
+  {
+    "chunk_id": "chunk_00040",
+    "text": "1\nSystem\nSystem information\nuname -a Displays all system information.\nhostnamectl Shows current hostname and related details.\nlscpu Lists CPU architecture information.\ntimedatectl status Shows system time.\nSystem monitoring and management\ntop Displays real-time system processes.\nhtop An interactive process viewer (needs installation).\ndf -h Shows disk usage in a human-readable format.\nfree -m Displays free and used memory in MB.\nkill <process id> Terminates a process.\nRunning commands\n<command> & Runs command in the background.\njobs Displays background commands.\nfg <command number> Brings command to the foreground.\nService management\nsudo systemctl start <service> Starts a service.\nsudo systemctl stop <service> Stops a service.\nsudo systemctl status <service> Checks the status of a service.\nsudo systemctl reload <service> Reloads a service’s configuration without\ninterrupting its operation.\njournalctl -f Follows the journal, showing new log messages in real time.\njournalctl -u <unit_name> Displays logs for a specific systemd unit.\nCron jobs and scheduling\ncrontab -e Edits cron jobs for the current user.\ncrontab -l Lists cron jobs for the current user.\nFiles\nFile management\nls Lists files and directories.\ntouch <filename> Creates an empty file or updates the last accessed date.\ncp <source> <destination> Copies files from source to destination.\nmv <source> <destination> Moves files or renames them.\nrm <filename> Deletes a file.\nDirectory navigation\npwd Displays the current dire",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 1
+  },
+  {
+    "chunk_id": "chunk_00041",
+    "text": "<source> <destination> Copies files from source to destination.\nmv <source> <destination> Moves files or renames them.\nrm <filename> Deletes a file.\nDirectory navigation\npwd Displays the current directory path.\ncd <directory> Changes the current directory.\nmkdir <dirname> Creates a new directory.\nFile permissions and ownership\nchmod [who][+/-][permissions] <file> Changes file permissions.\nchmod u+x <file> Makes a file executable by its owner.\nchown [user]:[group] <file> Changes file owner and group.\nSearching and finding\nfind [directory] -name <search_pattern> Finds files and directories.\ngrep <search_pattern> <file> Searches for a pattern in files.\nArchiving and compression\ntar -czvf <name.tar.gz> [files] Compresses files into a tar.gz archive.\ntar -xvf <name.tar.[gz|bz|xz]> [destination] Extracts a compressed tar archive.\nText editing and processing\nnano <file> Opens a file in the Nano text editor.\ncat <file> Displays the contents of a file.\nless <file> Displays the paginated content of a file.\nhead <file> Shows the first few lines of a file.\ntail <file> Shows the last few lines of a file.\nawk '{print}' <file> Prints every line in a file.\nUbuntu CLI cheat sheet",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 1
+  },
+  {
+    "chunk_id": "chunk_00042",
+    "text": "2\nPackages\nPackage management (APT)\nsudo apt install <package> Installs a package.\nsudo apt install -f --reinstall <package> Reinstalls a broken package.\napt search <package> Searches for APT packages.\napt-cache policy <package> Lists available package versions.\nsudo apt update Updates package lists.\nsudo apt upgrade Upgrades all upgradable packages.\nsudo apt remove <package> Removes a package.\nsudo apt purge <package> Removes a package and all its configuration files.\nPackage management (Snap)\nsnap find <package> Search for Snap packages.\nsudo snap install <snap_name> Installs a Snap package.\nsudo snap remove <snap_name> Removes a Snap package.\nsudo snap refresh Updates all installed Snap packages.\nsnap list Lists all installed Snap packages.\nsnap info <snap_name> Displays information about a Snap package.\nUsers and groups\nUser management\nw Shows which users are logged in.\nsudo adduser <username> Creates a new user.\nsudo deluser <username> Deletes a user.\nsudo passwd <username> Sets or changes the password for a user.\nsu <username> Switches user.\nsudo passwd -l <username> Locks a user account.\nsudo passwd -u <username> Unlocks a user password.\nsudo chage <username> Sets user password expiration date.\nGroup management\nid [username] Displays user and group IDs.\ngroups [username] Shows the groups a user belongs to.\nsudo addgroup <groupname> Creates a new group.\nsudo delgroup <groupname> Deletes a group.\nNetworking\nNetworking\nip addr show Displays network interfaces and IP addre",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 2
+  },
+  {
+    "chunk_id": "chunk_00043",
+    "text": "hows the groups a user belongs to.\nsudo addgroup <groupname> Creates a new group.\nsudo delgroup <groupname> Deletes a group.\nNetworking\nNetworking\nip addr show Displays network interfaces and IP addresses.\nip -s link Shows network statistics.\nss -l Shows listening sockets.\nping <host> Pings a host and outputs results.\nNetplan configuration (read more at netplan.io)\ncat /etc/netplan/*.yaml Displays the current Netplan configuration.\nsudo netplan try Tests a new configuration for a set period of time.\nsudo netplan apply Applies the current Netplan configuration.\nFirewall management\nsudo ufw status Displays the status of the firewall.\nsudo ufw enable Enables the firewall.\nsudo ufw disable Disables the firewall.\nsudo ufw allow <port/service> Allows traffic on a specific port or service.\nsudo ufw deny <port/service> Denies traffic on a specific port or service.\nsudo ufw delete allow/deny <port/service> Deletes an existing rule.\nSSH and remote access\nssh <user@host> Connects to a remote host via SSH.\nscp <source> <user@host>:<destination> Securely copies files between hosts.",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 2
+  },
+  {
+    "chunk_id": "chunk_00044",
+    "text": "3\nLXD\nLXD is a modern, secure and powerful tool that provides a unified experience for running\nand managing containers or virtual machines. Visit canonical.com/lxd for more information.\nlxd init initializes LXD before first use\nCreating instances\nlxc init ubuntu:24.04 <container name> Creates lxc system container (without\nstarting it).\nlxc launch ubuntu:24.04 <container name> Creates and starts a lxc system\ncontainer.\nlxc launch ubuntu:24.04 <vm name> --vm Creates and starts a virtual machine.\nManaging instances\nlxc list Lists instances.\nlxc info <instance> Shows status information about an instance.\nlxc start <instance> Starts an instance.\nlxc stop <instance> [--force] Stops an instance.\nlxc delete <instance> [--force|--interactive] Deletes an instance.\nAccessing instances\nlxc exec <instance> -- <command> Runs a command inside an instance.\nlxc exec <instance> -- bash Gets shell access to an instance (if bash is installed).\nlxc console <instance> [flags] Gets console access to an instance.\nlxc file pull <instance>/<instance_filepath> <local_filepath> Pulls a file\nfrom an instance.\nlxc file push <local_filepath> <instance>/<instance_filepath> Pushes a file\nto an instance.\nUsing projects\nlxc project create <project> [--config <option>] Creates a project.\nlxc project set <project> <option> Configures a project.\nlxc project switch <project> Switches to a project.\nUbuntu Pro\nUbuntu Pro delivers up to 12 years of security coverage, expanding Ubuntu’s\nLong Term Support (LTS) commitm",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00045",
+    "text": "option> Configures a project.\nlxc project switch <project> Switches to a project.\nUbuntu Pro\nUbuntu Pro delivers up to 12 years of security coverage, expanding Ubuntu’s\nLong Term Support (LTS) commitment and adding management and compliance tooling.\nVisit ubuntu.com/pro to register for free on up to five machines.\nActivating Ubuntu Pro\nsudo pro attach <token> Attaches your machine to Ubuntu Pro using a specific token.\nThis token is provided when you subscribe to Ubuntu Pro.\nManaging services\nsudo pro status Displays the status of all Ubuntu Pro services.\nsudo pro enable <service> Enables a specific Ubuntu Pro service, like ESM, FIPS, or\nLivepatch.\nsudo pro disable <service> Disables a specific Ubuntu Pro service.\nExtended Security Maintenance (ESM)\nsudo pro enable esm-infra Activates Extended Security Maintenance for\ninfrastructure packages, providing security updates beyond the standard release cycle.\nsudo pro enable esm-apps Activates ESM for applications, extending security coverage\nfor specific applications.\nLivepatch service\nsudo pro enable livepatch Enables the Livepatch service, which applies critical kernel\npatches without rebooting.\nFIPS mode\nsudo pro enable fips Enables FIPS (Federal Information Processing Standards) mode,\nenforcing strict cryptographic standards and practices.\nUpdating configuration\nsudo pro refresh Refreshes the Ubuntu Pro state to ensure the latest configuration\nand services are in place.\nDetaching Ubuntu Pro\nsudo pro detach Detaches the machine",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 3
+  },
+  {
+    "chunk_id": "chunk_00046",
+    "text": "actices.\nUpdating configuration\nsudo pro refresh Refreshes the Ubuntu Pro state to ensure the latest configuration\nand services are in place.\nDetaching Ubuntu Pro\nsudo pro detach Detaches the machine from Ubuntu Pro, disabling all services.",
+    "source": "ubuntu_cli_cheat_sheet_2025.pdf",
+    "page": 3
+  }
+]
